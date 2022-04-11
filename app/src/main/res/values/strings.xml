@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyTaxi</string>
+    <string name="transition_name" translatable="false">demoTransition</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="icon_menu_description">Menu icon</string>
+
+    <string name="to_order">Заказать</string>
+    <string name="delivery">Доставка</string>
+    <string name="label_interest">Что-то интересное 🤔</string>
+
+    <string name="choose_a_place">Select on map</string>
+    <string name="where">Куда?</string>
+</resources>

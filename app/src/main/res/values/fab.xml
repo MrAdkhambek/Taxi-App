@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.App.FloatingActionButton" parent="Base.Widget.Material3.ExtendedFloatingActionButton">
+        <item name="shapeAppearanceOverlay">@style/CircleShape</item>
+        <item name="maxImageSize">24dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="backgroundTint">@color/gainsboro</item>
+    </style>
+
+
+    <style name="CircleShape">
+        <item name="cornerSize">100%</item>
+    </style>
+</resources>

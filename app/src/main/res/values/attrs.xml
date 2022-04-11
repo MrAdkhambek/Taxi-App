@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    RoundedCornerLayout attributes     -->
+    <declare-styleable name="RoundedCornerLayout">
+        <attr name="android:background" format="color|reference" />
+        <attr name="radius_top_left" format="dimension" />
+        <attr name="radius_top_right" format="dimension" />
+        <attr name="radius_bottom_left" format="dimension" />
+        <attr name="radius_bottom_right" format="dimension" />
+
+        <attr name="radius_all" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="theme_attrs">
+        <attr name="divider_color" format="color|reference" />
+        <attr name="default_corner" format="dimension|reference" />
+        <attr name="text_secondary_color" format="color|reference" />
+
+    </declare-styleable>
+
+
+</resources>

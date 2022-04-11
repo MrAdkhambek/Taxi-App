@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.adkhambek.taxi.view.RoundedCornerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120"
+    android:background="@color/gainsboro"
+    app:radius_all="16dp"
+    tools:layout_margin="16dp">
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/icon_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_top" />
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="?selectableItemBackground"
+        app:layout_constraintBottom_toBottomOf="@id/icon_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_bottom" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_location_red"
+        app:layout_constraintBottom_toTopOf="@id/line_horizontal"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_location_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_horizontal"
+        app:layout_constraintVertical_weight="1" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:dividerColor="?attr/divider_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/line_vertical"
+        android:layout_width="1dp"
+        android:layout_height="24dp"
+        app:dividerColor="?attr/divider_color"
+        app:layout_constraintBottom_toBottomOf="@id/icon_bottom"
+        app:layout_constraintRight_toLeftOf="@id/weld_bottom"
+        app:layout_constraintTop_toTopOf="@id/icon_bottom" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weld_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:src="@drawable/ic_weld"
+        app:layout_constraintBottom_toBottomOf="@id/icon_bottom"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_bottom" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/top_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        style="?attr/textAppearanceBodyLarge"
+        android:textColor="?attr/text_secondary_color"
+        android:lines="1"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/icon_top"
+        app:layout_constraintLeft_toRightOf="@id/icon_top"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_top"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/bottom_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:lines="1"
+        android:text="@string/app_name"
+        style="?attr/textAppearanceBodyLarge"
+        app:layout_constraintBottom_toBottomOf="@id/icon_bottom"
+        app:layout_constraintLeft_toRightOf="@id/icon_bottom"
+        app:layout_constraintRight_toLeftOf="@id/line_vertical"
+        app:layout_constraintTop_toTopOf="@id/icon_bottom"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+</me.adkhambek.taxi.view.RoundedCornerLayout>

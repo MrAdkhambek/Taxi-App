@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.adkhambek.taxi.view.RoundedCornerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120"
+    android:background="@color/half_dutch_white"
+    app:radius_all="16dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/express_logo"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/nlo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</me.adkhambek.taxi.view.RoundedCornerLayout>

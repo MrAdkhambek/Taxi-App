@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.adkhambek.taxi.view.RoundedCornerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120"
+    android:background="@color/half_dutch_white"
+    app:radius_all="16dp">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        style="?attr/textAppearanceBodyLarge"
+        android:text="@string/delivery"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        style="?attr/textAppearanceBodyMedium"
+        android:textColor="?attr/text_secondary_color"
+        android:text="от 5,000 сум"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/box"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</me.adkhambek.taxi.view.RoundedCornerLayout>

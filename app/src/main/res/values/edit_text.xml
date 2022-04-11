@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/dodger_blue</item>
+        <item name="boxStrokeWidth">2dp</item>
+
+        <item name="cornerSize">?attr/default_corner</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded</item>
+<!--        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayout</item>-->
+<!--        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>-->
+<!--        <item name="hintTextColor">?attr/colorOnSurface</item>-->
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorPrimary">@color/dodger_blue</item>
+<!--        <item name="colorOnSurface">@color/shrine_pink_900</item>-->
+<!--        <item name="colorError">@color/shrine_red</item>-->
+<!--        <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>-->
+<!--        <item name="textAppearanceCaption">@style/TextAppearance.App.Caption</item>-->
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.TextInputLayout.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">?attr/default_corner</item>
+    </style>
+
+</resources>
