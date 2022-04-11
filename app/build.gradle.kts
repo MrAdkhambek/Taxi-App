@@ -62,7 +62,6 @@ dependencies {
     implementation(Deps.Kotlin.stdlib)
     implementation(Deps.AndroidX.multidex)
 
-
     implementation(Deps.AndroidX.coreKtx)
     implementation(Deps.AndroidX.activity)
     implementation(Deps.AndroidX.fragment)
@@ -89,9 +88,6 @@ dependencies {
     implementation(Deps.AndroidX.recyclerview)
 
     implementation(Deps.Hilt.hiltAndroid)
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.1")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1")
     kapt(Deps.Hilt.hiltCompiler)
 
     implementation(Deps.Coroutines.core)

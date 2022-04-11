@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyTaxi</string>
+    <string name="app_name">Taxi-App</string>
     <string name="transition_name" translatable="false">demoTransition</string>
 
     <string name="title_activity_maps">MapsActivity</string>

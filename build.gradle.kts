@@ -13,7 +13,6 @@ buildscript {
         classpath(kotlin("serialization", version = Deps.Kotlin.version))
         classpath("com.google.dagger", "hilt-android-gradle-plugin", Deps.Hilt.hiltVersion)
         classpath("com.google.gms:google-services:4.3.10")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.20")
     }
 }
 
