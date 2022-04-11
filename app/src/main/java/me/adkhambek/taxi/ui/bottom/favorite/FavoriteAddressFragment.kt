@@ -2,6 +2,7 @@ package me.adkhambek.taxi.ui.bottom.favorite
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -14,6 +15,7 @@ import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.Intent.Navig
 import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.State
 import me.adkhambek.taxi.ui.bottom.favorite.adapter.FavoriteAddressAdapter
 import me.adkhambek.taxi.utils.diffing.diff
+import me.adkhambek.taxi.utils.toCharSequence
 import org.orbitmvi.orbit.viewmodel.observe
 
 
@@ -56,8 +58,9 @@ class FavoriteAddressFragment :
     }
 
 
-    private fun handleSideEffect(effect: FavoriteAddressContract.SideEffect) {
-
+    private fun handleSideEffect(effect: FavoriteAddressContract.SideEffect): Unit = when (effect) {
+        is FavoriteAddressContract.SideEffect.Toast ->
+            Toast.makeText(requireContext(), effect.message.toCharSequence(requireContext()), Toast.LENGTH_SHORT).show()
     }
 
 

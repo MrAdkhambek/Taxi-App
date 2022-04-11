@@ -14,6 +14,7 @@ data class SearchResult(
 @Serializable
 data class AddressModel(
     @SerialName("formatted_address") val formattedAddress: String,
+    @SerialName("distance") val distance: String? = null,
     @SerialName("street_poi_id") val streetPoiId: Double,
     @SerialName("address_id") val addressId: Double,
     @SerialName("location") val location: LatLon,

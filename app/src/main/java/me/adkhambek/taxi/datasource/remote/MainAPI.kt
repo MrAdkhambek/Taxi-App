@@ -14,6 +14,8 @@ interface MainAPI {
     @GET("/v2/search")
     suspend fun search(
         @Query("limit") limit: Long,
-        @Query("query") query: String
+        @Query("query") query: String,
+        @Query("lat") lat: Double?,
+        @Query("lng") lng: Double?,
     ): Response<SearchResponse>
 }

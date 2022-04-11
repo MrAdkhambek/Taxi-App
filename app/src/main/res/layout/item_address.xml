@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:lines="1"
         android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/distance_text_view"
         app:layout_constraintVertical_chainStyle="packed"
         style="?attr/textAppearanceBodyLarge"
         app:layout_constraintBottom_toTopOf="@id/subtitle_text_view"
@@ -38,11 +38,25 @@
         android:lines="1"
         style="?attr/textAppearanceBodyMedium"
         android:textColor="?attr/text_secondary_color"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/distance_text_view"
         app:layout_constraintBottom_toBottomOf="@id/line_horizontal"
         app:layout_constraintLeft_toRightOf="@id/icon"
         app:layout_constraintTop_toBottomOf="@id/title_text_view"
         tools:text="@tools:sample/lorem[100]" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/distance_text_view"
+        style="?attr/textAppearanceBodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@tools:sample/lorem[1]" />
 
     <View
         android:id="@+id/line_horizontal"

@@ -12,4 +12,6 @@
     <string name="choose_a_place">Select on map</string>
     <string name="where">Куда?</string>
     <string name="unknown_server_error">Server Error</string>
+
+    <string name="distance_hint">%s km</string>
 </resources>

@@ -2,9 +2,11 @@ package me.adkhambek.taxi.ui.bottom.search.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import me.adkhambek.taxi.R
 import me.adkhambek.taxi.databinding.ItemAddressBinding
 import me.adkhambek.taxi.datasource.models.AddressModel
 
@@ -34,6 +36,11 @@ class SearchAddressAdapter(
         with(holder.binding) {
             titleTextView.text = item.address
             subtitleTextView.text = item.formattedAddress
+
+            distanceTextView.apply {
+                isVisible = item.distance != null
+                text = context.getString(R.string.distance_hint, item.distance)
+            }
         }
     }
 
