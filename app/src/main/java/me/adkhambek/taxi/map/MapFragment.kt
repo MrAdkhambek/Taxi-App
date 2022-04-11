@@ -11,7 +11,9 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onEach
+import kotlinx.serialization.SerialName
 import me.adkhambek.taxi.datasource.models.AddressModel
+import me.adkhambek.taxi.datasource.models.LatLon
 import me.adkhambek.taxi.ktx.viewLifecycleScope
 import me.adkhambek.taxi.map.MapController.MapControllerEvent.ChangeCamEvent
 import me.adkhambek.taxi.utils.AddressRuntimeStore
@@ -50,8 +52,15 @@ class MapFragment @Inject constructor(
     private suspend fun onChangeCam(latLng: LatLng) {
         val geoData = geocoder.getFromLocation(latLng.latitude, latLng.longitude, 1).firstOrNull() ?: return
         val addressModel = AddressModel(
-            title = geoData.thoroughfare.orEmpty(),
-            subtitle = geoData.thoroughfare.orEmpty(),
+            formattedAddress = geoData.thoroughfare.orEmpty(),
+            address = geoData.thoroughfare.orEmpty(),
+            lang = String(),
+            streetPoiId = 1.0,
+            addressId = 1.0,
+            location = LatLon(
+                lat = geoData.latitude,
+                lon = geoData.longitude
+            )
         )
 
         Timber.tag("geocoder").d(addressModel.toString())

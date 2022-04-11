@@ -10,6 +10,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
 import me.adkhambek.taxi.R
 import me.adkhambek.taxi.databinding.FragmentStopPointsBinding
+import me.adkhambek.taxi.ui.bottom.home.HomeContract
 import me.adkhambek.taxi.ui.bottom.stop.StopPointsContract.SideEffect
 import me.adkhambek.taxi.ui.bottom.stop.StopPointsContract.State
 import me.adkhambek.taxi.ui.bottom.stop.adapter.TariffAdapter
@@ -34,7 +35,22 @@ class StopPointsFragment : Fragment(R.layout.fragment_stop_points), BackButtonLi
         setupRecyclerView()
 
         val renderer = diff<State> {
-            diff(get = State::listOfAddress, set = tariffAdapter::submitList)
+            diff(get = State::listOfTariff, set = tariffAdapter::submitList)
+
+
+            diff(get = State::startPoint) {
+                binding
+                    .staticLayout
+                    .topTextView
+                    .text = it?.address ?: getString(R.string.choose_a_place)
+            }
+
+            diff(get = State::endPoint) {
+                binding
+                    .staticLayout
+                    .bottomTextView
+                    .text = it?.formattedAddress ?: getString(R.string.where)
+            }
         }
 
         viewModel

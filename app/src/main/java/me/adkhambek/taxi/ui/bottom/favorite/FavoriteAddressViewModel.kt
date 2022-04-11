@@ -5,10 +5,9 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import me.adkhambek.taxi.datasource.models.AddressModel
 import me.adkhambek.taxi.ui.bottom.BottomSheetConnector
 import me.adkhambek.taxi.ui.bottom.BottomSheetState
-import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.Intent.*
+import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.Intent.NavigateToOrder
 import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.SideEffect
 import me.adkhambek.taxi.ui.bottom.favorite.FavoriteAddressContract.State
-import me.adkhambek.taxi.ui.bottom.search.SearchAddressContract
 import org.orbitmvi.orbit.Container
 import org.orbitmvi.orbit.syntax.simple.intent
 import org.orbitmvi.orbit.syntax.simple.reduce
@@ -32,12 +31,12 @@ internal class FavoriteAddressViewModel  @Inject constructor(
     }
 
     private fun searchAddress(address: String) = intent {
-        val list = (1..4).map {
-            AddressModel(
-                title= "$address $it",
-                subtitle= "Address $it"
-            )
-        }
+        val list = emptyList<AddressModel>()//(1..4).map {
+//            AddressModel(
+//                title= "$address $it",
+//                subtitle= "Address $it"
+//            )
+//        }
 
         reduce {
             state.copy(listOfAddress = list)

@@ -1,5 +1,6 @@
 package me.adkhambek.taxi.ui.bottom.stop
 
+import me.adkhambek.taxi.datasource.models.AddressModel
 import me.adkhambek.taxi.datasource.models.Tariff
 import me.adkhambek.taxi.ui.bottom.BottomSheetConnector
 import me.adkhambek.taxi.ui.bottom.stop.StopPointsContract.State
@@ -16,7 +17,10 @@ interface StopPointsContract {
 
     data class State(
         val isLoading: Boolean,
-        val listOfAddress: List<Tariff>,
+        val listOfTariff: List<Tariff>,
+
+        val startPoint: AddressModel?,
+        val endPoint: AddressModel?
     )
 
     sealed interface Intent {
@@ -30,5 +34,8 @@ interface StopPointsContract {
 
 fun State(): State = State(
     isLoading = false,
-    listOfAddress = emptyList(),
+    listOfTariff = emptyList(),
+
+    startPoint = null,
+    endPoint = null,
 )

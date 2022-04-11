@@ -40,14 +40,14 @@ class HomeFragment : Fragment(R.layout.fragment_home), BackButtonListener {
                 binding
                     .staticLayout
                     .topTextView
-                    .text = it?.title ?: getString(R.string.choose_a_place)
+                    .text = it?.address ?: getString(R.string.choose_a_place)
             }
 
             diff(get = State::endPoint) {
                 binding
                     .staticLayout
                     .bottomTextView
-                    .text = it?.title ?: getString(R.string.where)
+                    .text = it?.formattedAddress ?: getString(R.string.where)
             }
         }
 

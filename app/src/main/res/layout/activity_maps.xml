@@ -13,6 +13,10 @@
         android:layout_height="match_parent" />
 
     <include
+        android:id="@+id/location_container"
+        layout="@layout/layout_location_icon" />
+
+    <include
         android:id="@+id/bottom_sheet_container"
         layout="@layout/layout_bottom_sheet" />
 

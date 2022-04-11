@@ -14,7 +14,7 @@ class SearchAddressAdapter(
 ) : ListAdapter<AddressModel, AddressViewHolder>(DIFF) {
 
     private companion object DIFF : DiffUtil.ItemCallback<AddressModel>() {
-        override fun areItemsTheSame(oldItem: AddressModel, newItem: AddressModel): Boolean = oldItem.title == newItem.title
+        override fun areItemsTheSame(oldItem: AddressModel, newItem: AddressModel): Boolean = oldItem.address == newItem.address
         override fun areContentsTheSame(oldItem: AddressModel, newItem: AddressModel): Boolean = oldItem == newItem
     }
 
@@ -32,8 +32,8 @@ class SearchAddressAdapter(
         val item = getItem(position)
 
         with(holder.binding) {
-            titleTextView.text = item.title
-            subtitleTextView.text = item.subtitle
+            titleTextView.text = item.address
+            subtitleTextView.text = item.formattedAddress
         }
     }
 

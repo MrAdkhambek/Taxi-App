@@ -3,6 +3,7 @@ package me.adkhambek.taxi.ui.bottom.search
 import me.adkhambek.taxi.datasource.models.AddressModel
 import me.adkhambek.taxi.ui.bottom.BottomSheetConnector
 import me.adkhambek.taxi.ui.bottom.search.SearchAddressContract.State
+import me.adkhambek.taxi.utils.Text
 import org.orbitmvi.orbit.ContainerHost
 
 
@@ -26,7 +27,7 @@ interface SearchAddressContract {
     }
 
     sealed interface SideEffect {
-
+        data class Toast(val message: Text) : SideEffect
     }
 }
 
