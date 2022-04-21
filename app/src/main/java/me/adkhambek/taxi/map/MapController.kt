@@ -44,7 +44,7 @@ interface MapController {
 
         companion object {
 
-            @JvmStatic
+            @[JvmStatic JvmOverloads]
             operator fun invoke(
                 commandName: String? = null,
                 command: suspend MapController.() -> Unit,
